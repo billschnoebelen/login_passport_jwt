@@ -1,0 +1,27 @@
+###  Get information on user
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmlsbCIsImlhdCI6MTU5NDgzMjc5MywiZXhwIjoxNTk0ODMyOTEzfQ.nhLPkpPncIAZz6Gh7jYUZI_lLkI59PjvENUc66hWqCk
+
+### Delete Refesh token
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmlsbCIsImlhdCI6MTU5NDgzMjY2N30.LYiEdd611TN912Ltd3hOP0GWQ_myiD347lSK9BwxCvQ"
+}
+
+### Get new refresh token
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQmlsbCIsImlhdCI6MTU5NDgzMjY2N30.LYiEdd611TN912Ltd3hOP0GWQ_myiD347lSK9BwxCvQ"
+}
+
+### Get token for user
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "Bill"
+}
